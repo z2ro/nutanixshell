@@ -1,0 +1,59 @@
+{
+  "api_version": "3.0",
+  "metadata": {
+    "kind": "vm"
+  },
+  "spec": {
+    "name": "VM-NAME",
+    "resources": {
+      "num_sockets": 1,
+      "num_vcpus_per_socket": 1,
+      "num_threads_per_core": 1,
+      "memory_size_mib": 2048,
+      "power_state": "ON",
+      "hardware_clock_timezone": "America/Sao_Paulo",
+      "disk_list": [
+        {
+          "device_properties": {
+            "disk_address": {
+              "adapter_type": "SCSI",
+              "device_index": 0
+            },
+            "device_type": "DISK"
+          },
+          "data_source_reference": {
+            "kind": "image",
+            "uuid": "string"
+          }
+        }
+      ],
+      "nic_list": [
+        {
+          "nic_type": "NORMAL_NIC",
+          "ip_endpoint_list": [
+            {
+              "type": "ASSIGNED",
+              "ip": "string"
+            }
+          ],
+          "subnet_reference": {
+            "kind": "subnet",
+            "uuid": "string"
+          }
+        }
+      ],
+      "boot_config": {
+        "boot_device": {
+          "disk_address": {
+            "adapter_type": "SCSI",
+            "device_index": 0
+          }
+        }
+      }
+    },
+    "cluster_reference": {
+      "kind": "cluster",
+      "uuid": "string"
+    }
+  }
+}
