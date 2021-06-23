@@ -4,7 +4,7 @@ read -p "Nutanix IP: " P_VIP
 read -p "User: " U_USER0
 read -sp "Password: " U_PASSWORD
 
-U_USER1=$(echo $U_USER0 | base64)
+U_USER1=$(echo $U_USER0:$U_PASSWORD | base64)
 
 x="nutanix"
 menu ()
