@@ -4,7 +4,7 @@ read -p "VM NAME: " V_NAME
 read -p "VCPU: " V_VCPU
 read -p "MEM: " V_MEM
 
-URL=https://x.x.x.x:9440/api/nutanix/v3/vms
+URL=https://$1:9440/api/nutanix/v3/vms
 
 DATAC=$(cat DATA-VM.json | jq --compact-output '.')
 
@@ -16,4 +16,4 @@ DATAC3=$(echo $DATAC2 | jq --compact-output --arg a "$V_MEM" '.spec.resources.me
 
 DATAC4=$(echo $DATAC3 | jq --compact-output --arg a "$V_MEM" '.spec.resources.memory_size_mib = $a')
 
-echo -e "curl -v --insecure --request POST --url $URL --header 'content-type: application/json' --header 'authorization: Basic auth' --data "$DATAC2""
+echo -e "curl -v --insecure --request POST --url $URL --header 'content-type: application/json' --header 'authorization: Basic $2' --data "$DATAC4""
