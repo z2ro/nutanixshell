@@ -1,5 +1,11 @@
 #!/bin/bash
 
+read -p "Nutanix IP: " P_VIP
+read -p "User: " U_USER0
+read -sp "Password: " U_PASSWORD
+
+U_USER1=$(echo $U_USER0 | base64)
+
 x="nutanix"
 menu ()
 {
@@ -22,7 +28,7 @@ echo "================================================"
 case "$x" in
 
     1)
-      ./create-vm.sh
+      ./create-vm.sh $P_VIP $U_USER1
       sleep 5
 
 echo "================================================"
