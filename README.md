@@ -1,17 +1,20 @@
-Nutanix Shell
+# Nutanix Shell
+
 A repository for a Nutanix API with shell. 
 
-Projects
+## Projects
 
-Create VM
- - Create a VM on bash
+* **Create VM**
 
-Update Template
- - Update a already created template with a existing vdisk on your nutanix cluster
+Create a VM on bash
 
-Getting Started
- - Download repo from Releases page
- - run on repo folder "chmod+x create-vm.sh get-template-uuid.sh menu.sh update-template.sh"
- - Need install JQ on linux
- - Edit parameters on get-template-uuid.sh update-template.sh create-vm.sh DATA-VM.json with your specific data.
- - Run menu.sh
+* **Update Template**
+
+ Update a already created template with a existing vdisk on your nutanix cluster
+
+## Getting Started
+1. Download repo from Releases page
+2. run on repo folder "chmod+x create-vm.sh get-template-uuid.sh menu.sh update-template.sh"
+3.  Need install JQ on linux
+4.  Edit parameters on get-template-uuid.sh update-template.sh create-vm.sh DATA-VM.json with your specific data.
+5.  Run menu.sh
