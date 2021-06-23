@@ -2,7 +2,7 @@
 
 A repository for a Nutanix API with shell. 
 
-## Projects
+## Features
 
 * **Create VM**
 
