@@ -16,4 +16,4 @@ DATAC3=$(echo $DATAC2 | jq --compact-output --arg a "$V_MEM" '.spec.resources.me
 
 DATAC4=$(echo $DATAC3 | jq --compact-output --arg a "$V_MEM" '.spec.resources.memory_size_mib = $a')
 
-echo -e "curl -v --insecure --request POST --url $URL --header 'content-type: application/json' --header 'authorization: Basic $2' --data "$DATAC4""
+curl -v --insecure --request POST --url $URL --header 'content-type: application/json' --header "'authorization: Basic $2'" --data "$DATAC4"
