@@ -15,9 +15,9 @@ echo
 CYD2=$CYD[0]
 CYD3=$CYD[1]
 echo "Acessando a VM e atualizando"
-echo -e "password | ssh -tt user@$VM_IP "${!CYD2}" >> "${!CYD3}""
+echo password | ssh -tt user@$VM_IP "${!CYD2}" >> "${!CYD3}"
 echo "Apagando a imagem atual $CYD ..."
-echo "curl --insecure --request DELETE --url https://$NTX_IP:9440/api/nutanix/v2.0/images/$UUID --header 'authorization: Basic auth'"
+curl --insecure --request DELETE --url https://$NTX_IP:9440/api/nutanix/v2.0/images/$UUID --header 'authorization: Basic auth'
 echo
 sleep 5
 echo "Aguarde..."
